@@ -1,0 +1,67 @@
+:root {
+  --primary: #1D8DB0;
+  --secondary: #ffffff;
+  --tertiary: #00407A;
+  --black: #000000;
+}
+
+table td {
+  border: 5px solid
+}
+
+td:hover { 
+  background-color: lightblue;
+}
+
+table td.crossed
+{
+  background-color: lightgray;
+  /*background-image: linear-gradient(to bottom right,  transparent calc(50% - 1px), grey, transparent calc(50% + 1px)); */
+  
+}
+
+.wrap {
+  border: var(--tertiary) solid 3px;
+}
+
+hr {
+  height:3px;
+  border-width:0;
+  color: var(--tertiary);
+  background-color: var(--tertiary);
+}
+
+.footer {
+ background-color: var(--primary);
+}
+
+
+.slider {
+  background-color: var(--primary);
+}
+/* summary {
+  background-color: var(--tertiary);
+  color: var(--secondary);
+  padding-left: 5%;
+  border: var(--black) solid 3px;
+}
+
+details details summary {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding-left: 5%;
+  border: var(--black) solid 3px;
+}
+
+  background-color: none;
+  color: var(--secondary);
+  padding-left: 5%;
+  border: none;
+} */
+
+#svg {
+  border: grey solid 3px;
+}
+
+
+

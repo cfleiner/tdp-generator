@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/bulma.min.css">
+        <link rel="stylesheet" href="./css/bulma-checkradio.min.css">
+        <link rel="stylesheet" href="./css/bulma-switch.min.css">
+        <link rel="stylesheet" href="./css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./css/bulma-tooltip.min.css">
+        <link rel="stylesheet"href="./css/styles.css"/>
+        <title>
+            TDP Generator
+        </title>
+    </head>
+<body>
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand is-size-4">
+            <a class="navbar-item" href="./index.html">
+            <img src="./word-cloud-focus.png">
+            </a>
+
+            <div class="navbar-end is-size-4">
+            <a class="navbar-item" href="./index.html">
+                Generator
+            </a>
+        
+            <a class="navbar-item" href="./analysis.html">
+                Analysis
+            </a>
+        
+            <a class="navbar-item" href="./about.html">
+                About us
+            </a>
+            </div>
+        </div>
+        </nav>
+
+
+    <hr>
+    
+    <div class="columns is-vcentered is-centered">
+        <div class="column is-half">
+                        <div class="column">
+                            <h1 class="title">TDP Generator</h1>
+                        </div>
+                        <section class="column">
+                            <details class="column">
+                            <summary class="is-size-2">Left Actor</summary>
+                            <details class="column">
+                                <summary class="is-size-4">Actor Type</summary>
+                                <div class="field is-size-5">
+                                    <input type="radio" class="is-checkradio  is-medium has-background-color" id="left-actor-type-human" name="left-actor-type" value="human" checked="checked">
+                                    <label for="left-actor-type-human">Human</label>
+                                </div>
+                                <div class="field is-size-5"> 
+                                    <input type="radio" class="is-checkradio  is-medium has-background-color" id="left-actor-type-machine"  name="left-actor-type"  value="machine"> 
+                                    <label for="left-actor-type-machine">Machine</label>
+                                </div>
+                                <div class="field is-size-5">
+                                    <input type="radio" class="is-checkradio  is-medium has-background-color" id="left-actor-type-none" name="left-actor-type"  value="none">
+                                    <label for="left-actor-type-none">None</label>
+                                </div>             
+                            </details>
+
+                            <details class="column">
+                                <summary class="is-size-4">Physical Work</summary>
+                                <details open class="column">
+                                    <summary class=" is-size-5">Individual</summary>
+                                    <div class="field is-size-5">
+                                        <div>                             
+                                        <label for="left-indiv-phy-direct">Direct: </label><label id="left-indiv-phy-direct-value"></label>
+                                        </div> 
+                                        <input type="range" min="0" max="8" value="0" class="slider is-medium is-fullwidth is-primary left-phy left-indiv-phy" id="left-indiv-phy-direct">
+                                    
+                                    </div>
+                                    <div class="field is-size-5">
+                                    <label for="left-indiv-phy-indirect">Indirect: </label><label id="left-indiv-phy-indirect-value"></label>
+                                    <input type="range" min="0" max="8" value="0" class="slider is-medium is-fullwidth is-primary left-phy left-indiv-phy" id="left-indiv-phy-indirect">
+                                    </div>
+                                    <div class="field is-size-5">
+                                    <label for="left-indiv-phy-off-task">Off-task: </label><label id="left-indiv-phy-off-task-value"></label>  
+                                    <input type="range" min="0" max="8" value="1" class="slider is-medium is-fullwidth is-primary left-phy left-indiv-phy" id="left-indiv-phy-off-task">
+                                    </div>
+                                    
+                                    <div class="field">
+                                        <input id="left-phy-subtask" type="checkbox" name="left-phy-subtask" class="switch is-medium">
+                                        <label for="left-phy-subtask">Subtask</label>
+                                    </div>
+
+                                </details>
+                                <details open class="column">
+                                    <summary class=" is-size-5">Joint</summary>
+                                    
+                                    <div class="field is-size-5">
+                                        <label for="left-joint-phy-direct">Direct: </label> <label id="left-joint-phy-direct-value"></label>
+                                        <input type="range" min="0" max="8" value="4" class="slider is-medium is-fullwidth is-primary left-phy left-joint-phy" id="left-joint-phy-direct">
+                                    </div>
+                                    
+                                    <div class="field is-size-5">
+                                        <label for="left-joint-phy-indirect">Indirect: </label><label id="left-joint-phy-indirect-value"></label>
+                                        <input type="range" min="0" max="8" value="3" class="slider is-medium is-fullwidth is-primary left-phy left-joint-phy" id="left-joint-phy-indirect">
+                                    </div>
+                                    
+                                    <div class="field is-size-5">
+                                        <label for="left-joint-phy-off-task">Off-task: </label><label id="left-joint-phy-off-task-value"></label>
+                                        <input type="range" min="0" max="8" value="0" class="slider is-medium is-fullwidth is-primary left-phy left-joint-phy" id="left-joint-phy-off-task">
+                                    </div>                                        
+                                    
+                                    
+                                    <label id="left-joint-phy-unassigned"></label>
+                                    <div class="field">
+                                        <input id="joint-phy-subtask" type="checkbox" name="joint-phy-subtask" class="switch is-medium joint-phy-subtask" checked="checked">
+                                        <label for="joint-phy-subtask">Subtask</label>
+                                    </div>
+                                </details>
+
+                                <div class="column">
+                                    <label class="tag is-primary is-size-6 has-text-weight-semibold" id="left-phy-unassigned"></label>
+                                </div>
+                            </details>
+                            <details class="column">
+                                <summary class=" is-size-4">Cognitive Work</summary>
+                                
+                                <div class="field is-size-5">
+                                <label for="left-cogni-direct">Direct: </label> <label id="left-cogni-direct-value"></label>
+                                <input type="range" min="0" max="4" value="2" class="slider is-medium is-fullwidth is-primary left-cogni" id="left-cogni-direct">
+                                </div>  
+                                
+                                <div class="field is-size-5">
+                                <label for="left-cogni-indirect">Indirect: </label><label id="left-cogni-indirect-value"></label>                                    
+                                <input type="range" min="0" max="4" value="1" class="slider is-medium is-fullwidth is-primary left-cogni" id="left-cogni-indirect">
+                                </div> 
+                                
+                                <div class="field is-size-5">
+                                <label for="left-cogni-off-task">Off-task: </label><label id="left-cogni-off-task-value"></label>
+                                <input type="range" min="0" max="4" value="0" class="slider is-medium is-fullwidth is-primary left-cogni" id="left-cogni-off-task">
+                                </div>
+                                
+                                
+                                <label class="tag is-primary is-size-6 has-text-weight-semibold" id="left-cogni-unassigned"></label>
+                            </details>
+                        </details>
+                        </section>
+                        <section class="column">
+                            <details class="column">
+                            <summary class=" is-size-2">Right Actor</summary>
+                            <details class="column">
+                                <summary class=" is-size-4">Actor Type</summary>
+                                <div class="field is-size-5">
+                                    <input type="radio" class="is-checkradio  is-medium has-background-color" id="right-actor-type-human" name="right-actor-type" value="human" >
+                                    <label for="right-actor-type-human">Human</label>
+                                </div>
+                                <div class="field is-size-5">
+                                    <input type="radio" class="is-checkradio  is-medium has-background-color" id="right-actor-type-machine"  name="right-actor-type"  value="machine" checked="checked"> 
+                                    <label for="right-actor-type-machine">Machine</label>
+                                </div>
+                                <div class="field is-size-5">
+                                    <input type="radio" class="is-checkradio  is-medium has-background-color" id="right-actor-type-none" name="right-actor-type"  value="none">
+                                    <label for="right-actor-type-none">None</label>
+                                </div>                           
+                                
+                            </details>
+                            <details class="column">
+                                <summary class=" is-size-4">Physical Work</summary>
+                            
+                                <details open class="column">
+                                    <summary class=" is-size-4">Individual</summary>                               
+                                    
+                                    <div class="field is-size-5">
+                                    <label for="right-indiv-phy-direct">Direct: </label><label id="right-indiv-phy-direct-value"></label>
+                                    <input type="range" min="0" max="8" value="0" class="slider is-medium is-fullwidth is-primary right-phy right-indiv-phy" id="right-indiv-phy-direct">
+                                    </div>
+                                    
+                                    <div class="field is-size-5">
+                                    <label for="right-indiv-phy-indirect">Indirect: </label><label id="right-indiv-phy-indirect-value"></label>
+                                    <input type="range" min="0" max="8" value="0" class="slider is-medium is-fullwidth is-primary right-phy right-indiv-phy" id="right-indiv-phy-indirect">
+                                    </div>
+                                    
+                                    <div class="field is-size-5">
+                                    <label for="right-phy-off-task">Off-task: </label><label id="right-indiv-phy-off-task-value"></label>
+                                    <input type="range" min="0" max="8" value="0" class="slider is-medium is-fullwidth is-primary right-phy right-indiv-phy" id="right-indiv-phy-off-task">
+                                    </div>
+                                    
+                                    <div class="field">
+                                        <input id="right-indiv-phy-subtask" type="checkbox" name="right-indiv-phy-subtask" class="switch is-medium">
+                                        <label for="right-indiv-phy-subtask">Subtask</label>
+                                    </div>
+                                </details>
+                                <details open class="column">
+                                    <summary class=" is-size-4">Joint</summary>
+                                    
+                                    <div class="field is-size-5">
+                                    <label for="right-joint-phy-direct">Direct: </label><label id="right-joint-phy-direct-value"></label>
+                                    <input type="range" min="0" max="8" value="4" class="slider is-medium is-fullwidth is-primary right-phy right-joint-phy" id="right-joint-phy-direct">
+                                    </div>
+                                    
+                                    <div class="field is-size-5">
+                                    <label for="right-joint-phy-indirect">Indirect: </label><label id="right-joint-phy-indirect-value"></label>
+                                    <input type="range" min="0" max="8" value="0" class="slider is-medium is-fullwidth is-primary right-phy right-joint-phy" id="right-joint-phy-indirect">
+                                    </div>
+                                    
+                                    <div class="field is-size-5">
+                                    <label for="right-joint-phy-off-task">Off-task: </label><label id="right-joint-phy-off-task-value"></label>
+                                    <input type="range" min="0" max="8" value="0" class="slider is-medium is-fullwidth is-primary right-phy right-joint-phy" id="right-joint-phy-off-task">
+                                    </div>
+                                    
+                                    
+                                    
+                                    <div class="field">
+                                        <input id="joint-phy-subtask" type="checkbox" name="joint-phy-subtask" class="switch is-medium joint-phy-subtask" checked="checked">
+                                        <label for="joint-phy-subtask">Subtask</label>
+                                    </div>
+                                </details>
+
+                            <div class="column">
+                                <label class="tag is-primary is-size-6 has-text-weight-semibold" id="right-phy-unassigned"></label>
+                            </div>
+                            </details>
+                        
+                            <details class="column">
+                                <summary class=" is-size-4">Cognitive Work</summary>
+                                
+                                <div class="field is-size-5">
+                                <label for="right-cogni-direct">Direct: </label><label id="right-cogni-direct-value"></label>
+                                <input type="range" min="0" max="4" value="0" class="slider is-medium is-fullwidth is-primary right-cogni" id="right-cogni-direct">
+                                </div>
+                                
+                                <div class="field is-size-5">
+                                <label for="right-cogni-indirect">Indirect: </label><label id="right-cogni-indirect-value"></label>                                    
+                                <input type="range" min="0" max="4" value="1" class="slider is-medium is-fullwidth is-primary right-cogni" id="right-cogni-indirect">
+                                </div>
+                                
+                                <div class="field is-size-5">
+                                <label for="right-cogni-off-task">Off-task: </label><label id="right-cogni-off-task-value"></label>
+                                <input type="range" min="0" max="4" value="0" class="slider is-medium is-fullwidth is-primary right-cogni" id="right-cogni-off-task">
+                                </div>
+                                
+                                
+                                <label class="tag is-primary is-size-6 has-text-weight-semibold" id="right-cogni-unassigned">Unassigned:</label>
+                            </details>
+                        </details>
+                        </section>
+                        <section class="column">
+                            <details class="column">
+                            <summary class=" is-size-2">Additional</summary>
+
+                            <details class="column">
+                                
+                                <summary class=" is-size-4">(Asymmetrical) Cognitive Work</summary>
+                                <div class="field is-size-5">
+                                    <input type="radio" class="is-checkradio  is-medium has-background-color" id="asymmetry-none" name="asymmetry"  value="none" >
+                                    <label for="asymmetry-none">None</label>
+                                </div>
+                                <div class="field is-size-5">
+                                    <input type="radio" class="is-checkradio  is-medium has-background-color" id="asymmetry-balanced" name="asymmetry" value="balanced" >
+                                    <label for="asymmetry-balanced">Balanced</label>
+                                </div>    
+                                <div class="field is-size-5">
+                                    <input type="radio" class="is-checkradio  is-medium has-background-color" id="asymmetry-left" name="asymmetry"  value="left" checked="checked">
+                                    <label for="asymmetry-left">Left supervision</label>
+                                </div> 
+                                <div class="field is-size-5">
+                                    <input type="radio" class="is-checkradio  is-medium has-background-color" id="asymmetry-right" name="asymmetry"  value="right">
+                                    <label for="asymmetry-right">Right supervision</label>
+                                </div>
+                            </details>
+
+                            <details class="column">
+                                <summary class=" is-size-4">LocatedRelativeTo</summary>
+                                <div class="field is-size-5">                               
+                                    <input type="radio" class="is-checkradio is-medium has-background-color" id="locatedRelativeTo-colocated" name="LocatedRelativeTo" value="colocated" checked="checked">
+                                    <label for="locatedRelativeTo-colocated">Colocated</label>
+                                </div>
+
+                                <div class="field is-size-5">
+                                <input type="radio" class="is-checkradio is-medium has-background-color" id="locatedRelativeTo-connected" name="LocatedRelativeTo"  value="connected">
+                                <label for="locatedRelativeTo-connected">Connected</label>
+                                </div>
+
+                                <div class="field is-size-5">
+                                <input type="radio" class="is-checkradio is-medium has-background-color" id="locatedRelativeTo-disconnected" name="LocatedRelativeTo"  value="disconnected">
+                                <label for="locatedRelativeTo-disconnected">Disconnected</label>
+                                </div>                                
+                            </details>
+
+                            <details class="column">
+                                <summary class=" is-size-4 has-background-color">Color Schema</summary>
+                                <div class="field column">
+                                    <input type="color" class="color" id="color-direct" name="color-direct" value="#4169e1" />
+                                    <label class="is-size-5" for="color-direct">Direct</label>
+                                </div>
+                                <div class="field column">
+                                    <input type="color" class="color" id="color-indirect" name="color-indirect" value="#add8e6" />
+                                    <label class="is-size-5" for="color-indirect">Indirect</label>
+                                </div>
+                                <div class="field column">
+                                    <input type="color" class="color" id="color-off-task" name="color-off-task" value="#a0a0a0" />
+                                    <label class="is-size-5" for="color-off-task">Off-task</label>
+                                </div>
+                                <div class="field column">
+                                    <input type="color" class="color" id="color-superior" name="color-superior" value="#228B22" />
+                                    <label class="is-size-5" for="color-superior">Superior task</label>
+                                </div>
+                            </details>
+                        </div>
+                    </details>
+                    </section>
+                    <section class="column">
+                        <button class="button is-primary is-medium is-centered" id="btn-download" >Download .svg</button>
+                        <svg id="svg-tdp" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 700 500"></svg>
+                    </section>
+                </div>
+                
+        </div>            
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
+
+
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/bulma-slider.min.js"></script>
+</body>
+</html>
