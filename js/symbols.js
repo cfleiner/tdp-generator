@@ -270,7 +270,7 @@ class CognitiveAsymmetry extends Symbol{
         this.width = 230;
         this.arrowLength = 20;
         if(arrowHead == 'none') {return;}
-        const sign = (arrowHead == 'left') ? -1 : 1 ;
+        const sign = (arrowHead == 'left') ? 1 : -1 ;
         this.addDashedLine(sign);
         if(arrowHead != 'balanced') {this.addArrowHead(sign);}
     }

@@ -3,21 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="./tdp-logo.svg">
         <link rel="stylesheet" href="./css/bulma.min.css">
         <link rel="stylesheet"href="./css/styles.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>
-            TDP Generator
+            About us
         </title>
     </head>
 <body>
     <hr>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand is-size-4">
-            <a class="navbar-item" href="./index.html">
-            <img src="./word-cloud-focus.png">
-            </a>
+        <div class="navbar-brand pl-6 px-2">
+            <figure class="image">
+                <a class="navbar-item" href="/">
+                <img  src="./word-cloud-focus.png" >
+                </a>
+            </figure>
 
-            <div class="navbar-end is-size-4">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+        </div>
+
+        <div id="nav-menu" class="navbar-menu">
+            <div class="navbar-start has-text-tertiary has-text-centered is-size-4">
             <a class="navbar-item" href="./index.html">
                 Generator
             </a>
@@ -31,12 +43,135 @@
             </a>
             </div>
         </div>
-        </nav>
+    </nav>
     <hr>
-    <div class="px-6">
-    <figure class="image">
-        <img src="./word-cloud-focus.png" width="200" height="auto">
-      </figure>
-    </div>
+    <section >
+        <h1 class="title is-2 has-text-centered has-text-tertiary">
+            About us
+        </h1>
+
+        <div class="card py-2">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                    <figure class="image is-96x96">
+                        <img src="https://media.licdn.com/dms/image/C4E03AQHqIheHdihW6w/profile-displayphoto-shrink_200_200/0/1644071677645?e=1699488000&v=beta&t=TJOkKu8DbAE0JSNFZlWthPLqxOO8CmYsRfppKGQ-_xo" alt="Profile image" 
+                        onerror="this.onerror=null;this.src = './word-cloud-focus.png';">
+                    </figure>
+                    </div>
+                    <div class="media-content">
+                    <p class="title is-4">Christian Fleiner</p>
+                    <p class="is-size-5">is a research member in the <a href="https://iiw.kuleuven.be/onderzoek/eavise">EAVISE</a> group at KU Leuven.
+                        His research focuses on intelligent user interfaces in the context of knowledge-based AI for 
+                        decision support in manufacturing.</p>
+                    </div>
+                </div>
+            <footer class="card-footer">
+                <a href="https://www.linkedin.com/in/christian-fleiner-579360ab/" class="card-footer-item"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                <a href="https://github.com/cfleiner" class="card-footer-item"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                <a href="mailto:christian.fleiner@kuleuven.be" class="card-footer-item"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+            </footer>
+        </div>
+        
+
+        <div class="card py-2">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                    <figure class="image is-96x96">
+                        <img src="https://media.licdn.com/dms/image/D4E03AQEx5809trhdrw/profile-displayphoto-shrink_200_200/0/1692458915679?e=1699488000&v=beta&t=ZaxOgjRE3pz2OBbtjRTEcWXRg2mwMqI-aX-TZXJ4vu0" alt="Profile image" 
+                        onerror="this.onerror=null;this.src = './word-cloud-focus.png';">
+                    </figure>
+                    </div>
+                    <div class="media-content">
+                    <p class="title is-4">Goran Zvekan</p>
+                    <p class="is-size-5">Goran Zvekan is a research and teaching associate at the 
+                        Chair of Accounting and Auditing at the Friedrich-Alexander-Universität Erlangen-Nürnberg. 
+                        His research focus is on the automated analysis of financial data in XBRL format.
+                        </p>
+                    </div>
+                </div>
+            <footer class="card-footer">
+                <a href="https://www.linkedin.com/in/goran-zvekan-95054b203/" class="card-footer-item"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                <a href="#" class="card-footer-item" style="pointer-events: none; color:lightgray;"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                <a href="mailto:goran.zvekan@fau.de" class="card-footer-item"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+            </footer>
+        </div>
+        </div>
+
+
+
+        <div class="card py-2">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                    <figure class="image is-96x96">
+                        <img src="https://media.licdn.com/dms/image/C5603AQHJrKNkFQRmrg/profile-displayphoto-shrink_200_200/0/1558989406766?e=1699488000&v=beta&t=bdMTddT4zJBqcExjlNc2HjduMFJSnLLpUiEuXwHnku4" alt="Profile image" 
+                        onerror="this.onerror=null;this.src = './word-cloud-focus.png';">
+                    </figure>
+                    </div>
+                    <div class="media-content">
+                    <p class="title is-4">Tomas Hatas</p>
+                    <p class="is-size-5">is a software engineer and former student at the Friedrich-Alexander-Universität Erlangen-Nürnberg.
+                        His master thesis focused on the development of his own visual dialect for Team Design Patterns. A <a href="https://tmshts.github.io/tdpgenerator/">generator</a> is available
+                        for the dialect.  
+                    </p>
+                    </div>
+                </div>
+            <footer class="card-footer">
+                <a href="https://www.linkedin.com/in/tomas-hatas/" class="card-footer-item"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                <a href="https://github.com/tmshts" class="card-footer-item"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                <a href="mailto:tomas.hatas@fau.de" class="card-footer-item"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+            </footer>
+        </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="content has-text-centered has-text-white is-size-5 has-text-weight-semibold">
+                <p>Collaborative work between</p>
+                <hr>
+            </div>
+            <div class="columns  has-text-centered has-background-color " style="background-color: white;">
+                <div class="column is-3 is-offset-1">
+                    <a href="https://www.kuleuven.be/kuleuven/">
+                    <img  style="object-fit: cover;"
+                        src="https://stijl.kuleuven.be/releases/latest/img/svg/logo.svg" 
+                        alt="KU Leuven logo" onerror="this.onerror=null;this.src = './word-cloud-focus.png';"
+                        height="300" width="300"  class="has-ratio">
+                    </a>
+                </div>
+              
+            
+                <div class="column is-3 is-offset-1">
+                    <a href="https://www.eavise.be">
+                        <img 
+                        src="https://iiw.kuleuven.be/onderzoek/eavise/logo_new/@@images/image/preview" 
+                        alt="EAVISE Logo" onerror="this.onerror=null;this.src = './word-cloud-focus.png';"
+                        height="300" class="has-ratio">
+                    </a>
+                </div>
+                
+              
+                <div class="column is-3 is-offset-1">
+                    <a href="https://www.fau.de/">
+                        <img  
+                        src="https://www.fau.de/files/2021/10/neues-fau-logo-nur-fuer-webmeldung-1024x198.jpg" 
+                        alt="FAU Logo" onerror="this.onerror=null;this.src = './word-cloud-focus.png';"
+                        height="300" class="has-ratio">
+                    </a>
+               </div>
+            
+            </div>
+            <hr>
+            <div class="content has-text-centered has-text-white">
+             <p><strong>Website created with</strong></p>
+              <p>
+                <strong>Bulma</strong> by <a class="has-text-warning" href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                <a class="has-text-warning" href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                is licensed <a class="has-text-warning" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+              </p>
+            </div>
+          </footer>
 </body>
 </html>

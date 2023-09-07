@@ -15,9 +15,13 @@ td:hover {
 
 table td.crossed
 {
-  background-color: lightgray;
+  background-color: #eeeeee ;
   /*background-image: linear-gradient(to bottom right,  transparent calc(50% - 1px), grey, transparent calc(50% + 1px)); */
   
+}
+
+.has-text-tertiary {
+  color: var(--tertiary)
 }
 
 .wrap {
@@ -39,25 +43,6 @@ hr {
 .slider {
   background-color: var(--primary);
 }
-/* summary {
-  background-color: var(--tertiary);
-  color: var(--secondary);
-  padding-left: 5%;
-  border: var(--black) solid 3px;
-}
-
-details details summary {
-  background-color: var(--primary);
-  color: var(--secondary);
-  padding-left: 5%;
-  border: var(--black) solid 3px;
-}
-
-  background-color: none;
-  color: var(--secondary);
-  padding-left: 5%;
-  border: none;
-} */
 
 #svg {
   border: grey solid 3px;

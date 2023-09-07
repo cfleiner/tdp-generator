@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="./tdp-logo.svg">
         <link rel="stylesheet" href="./css/bulma.min.css">
         <link rel="stylesheet" href="./css/bulma-checkradio.min.css">
         <link rel="stylesheet" href="./css/bulma-switch.min.css">
@@ -16,12 +17,22 @@
 <body>
     <hr>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand is-size-4">
-            <a class="navbar-item" href="./index.html">
-            <img src="./word-cloud-focus.png">
-            </a>
+        <div class="navbar-brand pl-6 px-2">
+            <figure class="image">
+                <a class="navbar-item" href="/">
+                <img  src="./word-cloud-focus.png" >
+                </a>
+            </figure>
 
-            <div class="navbar-end is-size-4">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+        </div>
+
+        <div id="nav-menu" class="navbar-menu">
+            <div class="navbar-start has-text-tertiary has-text-centered is-size-4">
             <a class="navbar-item" href="./index.html">
                 Generator
             </a>
@@ -35,15 +46,30 @@
             </a>
             </div>
         </div>
-        </nav>
+    </nav>
 
 
     <hr>
-    
-    <div class="columns is-vcentered is-centered">
+    <details class="pl-6 pb-6" style="color: gray">
+        <summary>
+            Description
+        </summary>
+        <p>The generator creates a TDP diagram adhereing to our interpretation of the 
+        visual notation proposed by Van Diggelen and Johnson.
+        Please refer to the <a href="https://doi.org/10.1145/3349537.3351892">original publication</a> and our poster
+        to understand the concrete syntax and the compositional rules that are applied. Our interpretation simplifies TDP diagrams
+        by (1) only supporting actors with raised arms and by (2) removing the support of the "at the ready" state. The selection process
+        is also simplified by only considering the sum of individual and joint work instead of letting the user enter all individual and joint work units
+        that are relevant for a human-machine team and calculate it later to the sum.</p>
+
+        <p>The TDP diagram is updated whenever an option changes. Download the current TDP diagram by clicking on "Download .svg".</p>
+    </details>
+
+
+    <div class="columns container is-vcentered pl-2">
         <div class="column is-half">
                         <div class="column">
-                            <h1 class="title">TDP Generator</h1>
+                            <h1 class="title is-2 has-text-centered has-text-tertiary">TDP Generator</h1>
                         </div>
                         <section class="column">
                             <details class="column">
@@ -319,11 +345,48 @@
     </div>
 
     <footer class="footer">
-        <div class="content has-text-centered">
+        <div class="content has-text-centered has-text-white is-size-5 has-text-weight-semibold">
+            <p>Collaborative work between</p>
+            <hr>
+        </div>
+        <div class="columns  has-text-centered has-background-color " style="background-color: white;">
+            <div class="column is-3 is-offset-1">
+                <a href="https://www.kuleuven.be/kuleuven/">
+                <img  style="object-fit: cover;"
+                    src="https://stijl.kuleuven.be/releases/latest/img/svg/logo.svg" 
+                    alt="KU Leuven logo" onerror="this.onerror=null;this.src = './word-cloud-focus.png';"
+                    height="300" width="300"  class="has-ratio">
+                </a>
+            </div>
+          
+        
+            <div class="column is-3 is-offset-1">
+                <a href="https://www.eavise.be">
+                    <img 
+                    src="https://iiw.kuleuven.be/onderzoek/eavise/logo_new/@@images/image/preview" 
+                    alt="EAVISE Logo" onerror="this.onerror=null;this.src = './word-cloud-focus.png';"
+                    height="300" class="has-ratio">
+                </a>
+            </div>
+            
+          
+            <div class="column is-3 is-offset-1">
+                <a href="https://www.fau.de/">
+                    <img  
+                    src="https://www.fau.de/files/2021/10/neues-fau-logo-nur-fuer-webmeldung-1024x198.jpg" 
+                    alt="FAU Logo" onerror="this.onerror=null;this.src = './word-cloud-focus.png';"
+                    height="300" class="has-ratio">
+                </a>
+           </div>
+        
+        </div>
+        <hr>
+        <div class="content has-text-centered has-text-white">
+         <p><strong>Website created with</strong></p>
           <p>
-            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            <strong>Bulma</strong> by <a class="has-text-warning" href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a class="has-text-warning" href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a class="has-text-warning" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
           </p>
         </div>
       </footer>

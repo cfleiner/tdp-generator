@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="500">
+    <defs>
+    <pattern id="PatternBlock" width="0.052" height="0.1" patternContentUnits="objectBoundingBox">
+        <rect x="0" y="0" height="1" width="1" fill="lightblue"/>
+        <line x1="0.03" y1="0" x2="0.03" y2="1" stroke="blue" stroke-width="0.008"/>
+        <line x1="0" y1="0.05" x2="1" y2="0.05" stroke="blue" stroke-width="0.015"/>
+    </pattern>
+    <pattern id="PatternHead" width=".2" height=".2" patternContentUnits="objectBoundingBox">
+        <rect x="0" y="0" height="1" width="1" fill="lightblue"/>
+        <line x1="0.03" y1="0" x2="0.03" y2="1" stroke="blue" stroke-width="0.03"/>
+        <line x1="0" y1="0.05" x2="1" y2="0.05" stroke="blue" stroke-width="0.03"/>
+    </pattern>
+   </defs>
+    <!-- Canvas Field -->
+    <rect x="0" y="0" width="700" height="500" fill="white"/>
+    <!-- Location -->
+    <rect x="10" y="10" width="680" height="480" fill="none" stroke="black" stroke-width="7"/>
+    
+    <!-- Issubtask -->
+    <rect x="300" y="25" width="100" height="50" fill="none" stroke="black" stroke-width="5"/>
+    <path d="M 300 50 l -50 0 0 50" stroke="black" stroke-width="5" fill="transparent"/>
+    <path d="M 400 50 l 50 0 0 50" stroke="black" stroke-width="5" fill="transparent"/>
+    <!-- PhyWork-->
+    <rect x="50" y="100" width="250" height="80" fill="url(#PatternBlock)" stroke="black" stroke-width="5"/>
+    <rect x="400" y="100" width="250" height="80" fill="none" stroke="black" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Machine -->
+
+    <!-- machine body -->
+    <rect x="450" y="300" width="150" height="150" fill="none"  stroke="black" stroke-width="5"/>
+    <!-- machine head -->
+    <rect x="485" y="220" width="80" height="80" fill="none" stroke="black" stroke-width="5"/>
+    
+    <!-- top-left quarter -->
+    <rect x="487" y="222" width="38" height="38" fill="green"/>
+    <!-- top-right quarter -->
+    <rect x="525" y="222" width="38" height="38" fill="url(#PatternHead)"/>
+    <!-- bottom-left quarter -->
+    <rect x="487" y="260" width="38" height="38" fill="purple"/>
+    <!-- bottom-right quarter -->
+    <rect x="525" y="260" width="38" height="38" fill="yellow"/>
+    <!-- machine arms -->
+    <path d="M 560 330 l 70 0 l 0 -150"  stroke="black" stroke-width="5" fill="none" />
+    <path d="M 485 330 l -70 0 l 0 -150"  stroke="black" stroke-width="5" fill="none" />
+  
+    <!-- Human -->
+    <!-- body -->
+    <path  d="M 100 450 a 75 160 0 0 1 150 0" stroke="black" stroke-width="5" fill="none"/>
+    <!-- head to overdraw neck -->
+    <circle cx="175" cy="260" r="40" stroke="black" stroke-width="5" fill="white"/>
+    bottom
+    <!-- arms -->
+    <line x1="100" y1="450" x2="250" y2="450"  stroke="black" stroke-width="5" fill="white"/>
+    
+    <!-- arms -->
+    <path d="M 140 330 c 0 0 -80 -5 -70 -150" stroke="black" stroke-width="5" fill="transparent"/>
+    <path d="M 210 330 c 0 0 80 5 70 -150" stroke="black" stroke-width="5" fill="transparent"/>
+   
+    <!-- right-top quarter -->
+    <path d="M 215 260 a 40 40 0 0  0, -40 -40 l 0 40 Z"  fill="url(#PatternHead)"/>
+    <!-- left-top quarter -->
+    <path d="M 135 260 a 40 40 0 0  1, 40 -40 l 0 40 Z"   fill="url(#PatternHead)"/>
+    <!-- leftbottom quarter -->
+    <path d="M 135 260 a 40 40 0 0  0, 40  40 l 0 -40 Z"  fill="url(#PatternHead)"/>
+    <!-- rightbottom quarter -->
+    <path d="M 215 260 a 40 40 0 0  1, -40 40 l 0 -40 Z"  fill="url(#PatternHead)"/>
+    <!-- Human Head -->
+    <circle cx="175" cy="260" r="40" stroke="black" stroke-width="5" fill="none"/>
+   
+     <!-- ArrowHead leftbolt -->
+    <path d="M 350 10 l 0 0 -30 100 30 0 -30 100 30 0 -30 100 30 0 -30 100 30 0 -30 80" stroke="black" stroke-width="5" fill="transparent"/>
+    
+     <!-- right bolt -->
+    <path d="M 370 10 l 0 0 -24 80 30 0 -30 100 30 0 -30 100 30 0 -30 100 30 0 -36 100" stroke="black" stroke-width="5" fill="transparent"/>
+     <!-- white gaps -->
+    <rect x="352" y="5" width="14" height="9" fill="white" />
+    <rect x="324" y="486" width="15" height="9" fill="white" />
+    
+
+    <!-- dashed line -->
+    <path d="M 235 260 l 230 0" fill="transparent" stroke="black" stroke-width="6" stroke-dasharray="10,10"/>
+    <!-- ArrowHead right -->
+    <path d="M 250 260 l 0 10 -20 -10 20 -10" fill="black"/>
+    <!-- ArrowHead left -->
+    <path d="M 450 260 l 0 -10 20 10 -20 10" fill="black"/>
+
+
+</svg>

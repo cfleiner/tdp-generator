@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="./tdp-logo.svg">
         <link rel="stylesheet" href="./css/bulma.min.css">
         <link rel="stylesheet"href="./css/styles.css"/>
         <title>
@@ -13,12 +14,22 @@
     <hr>
 
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand is-size-4">
-            <a class="navbar-item" href="./index.html">
-            <img src="./word-cloud-focus.png">
-            </a>
+        <div class="navbar-brand pl-6 px-2">
+            <figure class="image">
+                <a class="navbar-item" href="/">
+                <img  src="./word-cloud-focus.png" >
+                </a>
+            </figure>
 
-            <div class="navbar-end is-size-4">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+        </div>
+
+        <div id="nav-menu" class="navbar-menu">
+            <div class="navbar-start has-text-tertiary has-text-centered is-size-4">
             <a class="navbar-item" href="./index.html">
                 Generator
             </a>
@@ -35,32 +46,143 @@
     </nav>
     <hr>
 
-    <div class="content px-6">
-    <h1 class="title is-centered">Critical Analysis</h1>
+    <!-- <div class="content px-6"> -->
+    <h1 class="title is-2 has-text-centered has-text-tertiary">
+        Critical Analysis
+    </h1>
    
     <section class="section">
-            <h2 class="subtitle">Motivation</h2>
-
-        </section>
-
-
-        <section class="section">
-        <h2 class="subtitle">Concrete Syntax and Compositional Rules</h2>
-        <p><a href="./variables.html">Table</a>: Overview how the 
-        visual variables are used in the original notation to represent semantic constructs.</p>
-
-        <iframe src="./variables.html" title="variables table" width="100%"></iframe>
-        </section>
-
-        <section class="section">
-        <h2 class="subtitle">Application of Visual Notation</h2>
-        <p><a href="./publications.html">Table</a>: List of publications applying the 
-            original notation with discrepancies sorted by year in descending order.</p>
-        <iframe src="./publications.html" title="publications table" width="100%"></iframe>
-        
-        </section>
-
+    <div class="container content has-text-centered">
+            <h2 class="subtitle is-3 has-text-primary">
+                Motivation
+            </h2>
+            <p>There is a lack of tools to communicate the essence of human-agent collaboration in a straightforward 
+            and effective manner to all stakeholders. Van Diggelen and Johnson [2] introduced the 
+            concept of team design patterns (TDPs) to the HAI community in 2019 to facilitate the understanding of 
+            human-agent collaboration scenarios for a broad range of stakeholders by capturing the key elements of 
+            human-agent collaboration. A visual notation was provided to illustrate TDPs and was 
+            inspired by the seminal work of Sheridan and Verplank [2]. The visual notation was decribed as "living language,
+            that will evolve over time as more people start to use it".
+            </p>
+            <p class="is-4 has-text-primary"><strong>
+                Four years after the visual notation has been introduced, this website serves two purposes:
+            </strong></p>
+            <ol class="is-lower-alpha">
+                <li>
+                    Providing a website to easily <a href="./index.html">generate TDP diagrams</a>
+                    to lower the entrance barrier to get started with the visual notation.
+                </li>
+                <li>
+                    Displaying supplementary material of the analysis results of the visual notation that were presented as
+                    a poster (DOI will be added as soon as available) at the <a href="https://hai-conference.net/hai2023/">Conference on Human-Agent Interaction (HAI 2023)</a>  
+                </li>
+            </ol>
     </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+        <h2 class="subtitle is-3 has-text-centered has-text-primary">
+            Application of the Visual Variables
+        </h2>
+        <p>
+            According to Bertin [3], 
+            eight visual variables can be used to encode information. We summarized the notation's use of the
+            variables in the <a class="has-text-weight-semibold" href="./variables.html" target="blank">Table </a> below. For more information, please refer to the published poster (add link).</p>
+
+        <iframe class="pt-3" src="./variables.html" title="variables table" width="100%"></iframe>
+        </div>
+
+
+    </section>
+
+    <section class="section">
+        <div class="container">
+        <h2 class="subtitle is-3 has-text-centered has-text-primary">Application of the Visual Notation</h2>
+        <p>
+            We identified and analyzed eight research articles in which the original notation was applied. 
+            The articles were published between the years 2020 and 2023. All publications addressed the public 
+            safety domain. All authors are from the Netherlands and some are co-authors of multiple publications 
+            indicating that the effective dissemination of the original notation is currently limited to a small 
+            working group in the Netherlands. The results are summarized in the <a class="has-text-weight-semibold" href="./publications.html" target="blank">Table </a>below. 
+            For more information, please refer to the published poster (add link). 
+        </p>
+
+        <iframe class="pt-3" src="./publications.html" title="publications table" width="100%"></iframe>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-6">
+            <h3 class="subtitle is-4 has-text-centered has-text-primary">References</h3>
+            <div class="box">           
+                <strong>[1]</strong>&ensp;Jurriaan van Diggelen and Matthew Johnson. 2019. Team Design Patterns. 
+                In Proceedings of the 7th International Conference on Human-Agent Interaction (HAI '19). 
+                Association for Computing Machinery, New York, NY, USA, 118–126. 
+                <a href="https://doi.org/10.1145/3349537.3351892">https://doi.org/10.1145/3349537.3351892</a>
+               
+            </div>
+    
+            <div class="box">
+                <strong>[2]</strong>&ensp; Sheridan, T. B., Verplank, W. L., & Brooks, T. L. (1978, November). Human/computer control of 
+                undersea teleoperators. In NASA. Ames Res. Center The 14th Ann. Conf. on Manual Control.
+            </div>
+    
+            <div class="box">
+                <strong>[3]</strong>&ensp; Bertin, J. (1983). Semiology of graphics. University of Wisconsin press.
+            </div>
+        </div>
+
+    </section>
+    
+
+    <footer class="footer">
+        <div class="content has-text-centered has-text-white is-size-5 has-text-weight-semibold">
+            <p>Collaborative work between</p>
+            <hr>
+        </div>
+        <div class="columns  has-text-centered has-background-color " style="background-color: white;">
+            <div class="column is-3 is-offset-1">
+                <a href="https://www.kuleuven.be/kuleuven/">
+                <img  style="object-fit: cover;"
+                    src="https://stijl.kuleuven.be/releases/latest/img/svg/logo.svg" 
+                    alt="KU Leuven logo" onerror="this.onerror=null;this.src = './word-cloud-focus.png';"
+                    height="300" width="300"  class="has-ratio">
+                </a>
+            </div>
+          
+        
+            <div class="column is-3 is-offset-1">
+                <a href="https://www.eavise.be">
+                    <img 
+                    src="https://iiw.kuleuven.be/onderzoek/eavise/logo_new/@@images/image/preview" 
+                    alt="EAVISE Logo" onerror="this.onerror=null;this.src = './word-cloud-focus.png';"
+                    height="300" class="has-ratio">
+                </a>
+            </div>
+            
+          
+            <div class="column is-3 is-offset-1">
+                <a href="https://www.fau.de/">
+                    <img  
+                    src="https://www.fau.de/files/2021/10/neues-fau-logo-nur-fuer-webmeldung-1024x198.jpg" 
+                    alt="FAU Logo" onerror="this.onerror=null;this.src = './word-cloud-focus.png';"
+                    height="300" class="has-ratio">
+                </a>
+           </div>
+        
+        </div>
+        <hr>
+        <div class="content has-text-centered has-text-white">
+         <p><strong>Website created with</strong></p>
+          <p>
+            <strong>Bulma</strong> by <a class="has-text-warning" href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a class="has-text-warning" href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a class="has-text-warning" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
 
 </body>
 </html>
